@@ -5,6 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siva Sanjay Muthu T | AI & Cybersecurity Portfolio</title>
+    <meta name="description"
+        content="Siva Sanjay Muthu T (Mack) — AI Researcher & Cybersecurity Engineer building real-time threat detection systems, computer vision, and full-stack applications.">
+    <link rel="icon" type="image/jpeg" href="assets/me.jpeg">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Siva Sanjay Muthu T | AI & Cybersecurity Portfolio">
+    <meta property="og:description"
+        content="AI Researcher & Cybersecurity Engineer building real-time threat detection systems, computer vision, and full-stack applications.">
+    <meta property="og:image" content="assets/me.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Siva Sanjay Muthu T | AI & Cybersecurity Portfolio">
+    <meta name="twitter:description"
+        content="AI Researcher & Cybersecurity Engineer building real-time threat detection systems, computer vision, and full-stack applications.">
+    <meta name="twitter:image" content="assets/me.jpeg">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -223,17 +238,26 @@
 
         .hero-content {
             z-index: 1;
-            max-width: 900px;
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        .hero-text {
+            max-width: 700px;
         }
 
         .hero-avatar {
-            width: 140px;
-            height: 140px;
+            width: 320px;
+            height: 320px;
+            flex-shrink: 0;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent);
             box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25);
-            margin-bottom: 2rem;
         }
 
         .hero-greeting {
@@ -523,6 +547,7 @@
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: start;
             gap: 2rem;
         }
 
@@ -746,6 +771,7 @@
         .edu-cert-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            align-items: start;
             gap: 4rem;
         }
 
@@ -912,6 +938,20 @@
             .projects-grid {
                 grid-template-columns: 1fr 1fr;
             }
+
+            .hero-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-avatar {
+                width: 160px;
+                height: 160px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -996,19 +1036,21 @@
     <section id="hero">
         <div id="tsparticles"></div>
         <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-greeting">Hi, I'm</span>
+                <h1 class="hero-name brand-font" id="hero-name-container"></h1>
+                <div class="hero-roles">
+                    <span class="role-text active">AI Researcher</span>
+                    <span class="role-text">Cybersecurity Engineer</span>
+                    <span class="role-text">Full-Stack Developer</span>
+                    <span class="role-text">Founder</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                </div>
+            </div>
             <img src="assets/me.jpeg" alt="Siva Sanjay Muthu T" class="hero-avatar">
-            <span class="hero-greeting">Hi, I'm</span>
-            <h1 class="hero-name brand-font" id="hero-name-container"></h1>
-            <div class="hero-roles">
-                <span class="role-text active">AI Researcher</span>
-                <span class="role-text">Cybersecurity Engineer</span>
-                <span class="role-text">Full-Stack Developer</span>
-                <span class="role-text">Founder</span>
-            </div>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-outline">Get in Touch</a>
-            </div>
         </div>
         <div class="scroll-down">
             <span>Scroll</span>
@@ -1249,7 +1291,20 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-header">
-                    <h3 class="project-title brand-font">Niral – Naan Mudhalvan Niral Thiruvizha Hackathon</h3>
+                    <h3 class="project-title brand-font">
+                        <a href="https://github.com/mackshema/niral_project_dashboard" target="_blank" rel="noopener"
+                            style="display:flex; align-items:flex-start; gap:0.5rem; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">
+                            Niral – Naan Mudhalvan Niral Thiruvizha Hackathon
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                style="opacity: 0.7; flex-shrink: 0; margin-top: 0.25rem;">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                    </h3>
                 </div>
                 <p class="project-desc">Hackathon organized by Tamil Nadu Skill Development Corporation (TNSDC), under the Special Programme Implementation Department, Govt. of Tamil Nadu, in partnership with Anna University. Developed an IoT Smart Toilet System — sensor-based cleanliness monitoring, automated flushing, occupancy detection, and real-time maintenance alerts via mobile dashboard.</p>
                 <div class="project-tech">
@@ -1338,7 +1393,19 @@
 
             <div class="project-card">
                 <div class="project-header">
-                    <h3 class="project-title brand-font">SRM Exam Hall Planner</h3>
+                    <h3 class="project-title brand-font">
+                        <a href="https://github.com/mackshema/SRM_hallplaner" target="_blank" rel="noopener"
+                            style="display:flex; align-items:center; gap:0.5rem; transition: color 0.3s;"
+                            onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='inherit'">
+                            SRM Exam Hall Planner
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity: 0.7;">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                    </h3>
                 </div>
                 <p class="project-desc">A comprehensive React-based graphical architecture for automated examination
                     seating and hall allotment. Computationally resolves complex logistical constraints via intelligent
