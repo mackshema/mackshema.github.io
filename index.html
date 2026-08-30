@@ -226,6 +226,16 @@
             max-width: 900px;
         }
 
+        .hero-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.25);
+            margin-bottom: 2rem;
+        }
+
         .hero-greeting {
             font-size: 1.25rem;
             font-weight: 700;
@@ -283,6 +293,7 @@
 
         .hero-cta {
             display: flex;
+            flex-wrap: wrap;
             gap: 1.5rem;
         }
 
@@ -985,6 +996,7 @@
     <section id="hero">
         <div id="tsparticles"></div>
         <div class="hero-content">
+            <img src="assets/me.jpeg" alt="Siva Sanjay Muthu T" class="hero-avatar">
             <span class="hero-greeting">Hi, I'm</span>
             <h1 class="hero-name brand-font" id="hero-name-container"></h1>
             <div class="hero-roles">
@@ -1487,6 +1499,15 @@
                         </path>
                     </svg>
                     +91 7448881750
+                </a>
+                <a href="assets/Siva_Sanjay_Resume.pdf" class="contact-pill" download>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Resume
                 </a>
             </div>
         </div>
